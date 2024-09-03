@@ -1,0 +1,80 @@
+<html><body><h1>test\test_calculator.py</h1>Killed 93 out of 101 mutants<h2>Survived</h2>Survived mutation testing. These mutants show holes in your test suite.<h3>Mutant 1</h3><pre>--- test\test_calculator.py
++++ test\test_calculator.py
+@@ -11,7 +11,7 @@
+ # Sum tests
+ #
+ def test_sum_returns_number():    
+-    assert isinstance(sum(3, 5), (float, int))
++    assert isinstance(sum(4, 5), (float, int))
+ 
+ def test_sum_3_and_8_equals_11():
+     assert sum(3, 8) == 11
+</pre><h3>Mutant 2</h3><pre>--- test\test_calculator.py
++++ test\test_calculator.py
+@@ -11,7 +11,7 @@
+ # Sum tests
+ #
+ def test_sum_returns_number():    
+-    assert isinstance(sum(3, 5), (float, int))
++    assert isinstance(sum(3, 6), (float, int))
+ 
+ def test_sum_3_and_8_equals_11():
+     assert sum(3, 8) == 11
+</pre><h3>Mutant 62</h3><pre>--- test\test_calculator.py
++++ test\test_calculator.py
+@@ -60,7 +60,7 @@
+     assert multiply(-6, 3) == -18
+ 
+ def test_multiply_0_by_3_returns_0():
+-    assert multiply(0, 3) == 0
++    assert multiply(0, 4) == 0
+ 
+ def test_multiply_6_by_0_returns_0():
+     assert multiply(6, 0) == 0
+</pre><h3>Mutant 65</h3><pre>--- test\test_calculator.py
++++ test\test_calculator.py
+@@ -63,7 +63,7 @@
+     assert multiply(0, 3) == 0
+ 
+ def test_multiply_6_by_0_returns_0():
+-    assert multiply(6, 0) == 0
++    assert multiply(7, 0) == 0
+ 
+ def test_multiply_6_4_by_4_3_returns_27_52():
+     assert multiply(6.4, 4.3) == 27.52
+</pre><h3>Mutant 97</h3><pre>--- test\test_calculator.py
++++ test\test_calculator.py
+@@ -90,7 +90,7 @@
+ # number of decimals). It is necessary to pass a second 
+ # value to the approx() function stating the level of tolerance
+ def test_divide_7_by_3_equals_2_33():
+-    assert divide(7, 3) == approx(2.33, rel=2e-3)
++    assert divide(7, 3) == approx(2.33, rel=1.002)
+ 
+ def test_division_by_zero_raises_exception():
+     with pytest.raises(ZeroDivisionError):
+</pre><h3>Mutant 98</h3><pre>--- test\test_calculator.py
++++ test\test_calculator.py
+@@ -94,4 +94,4 @@
+ 
+ def test_division_by_zero_raises_exception():
+     with pytest.raises(ZeroDivisionError):
+-        assert divide(7, 0) == 0
++        assert divide(8, 0) == 0
+</pre><h3>Mutant 100</h3><pre>--- test\test_calculator.py
++++ test\test_calculator.py
+@@ -94,4 +94,4 @@
+ 
+ def test_division_by_zero_raises_exception():
+     with pytest.raises(ZeroDivisionError):
+-        assert divide(7, 0) == 0
++        assert divide(7, 0) != 0
+</pre><h3>Mutant 101</h3><pre>--- test\test_calculator.py
++++ test\test_calculator.py
+@@ -94,4 +94,4 @@
+ 
+ def test_division_by_zero_raises_exception():
+     with pytest.raises(ZeroDivisionError):
+-        assert divide(7, 0) == 0
++        assert divide(7, 0) == 1
+</pre></body></html>

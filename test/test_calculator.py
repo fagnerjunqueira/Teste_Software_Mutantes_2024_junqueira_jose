@@ -5,6 +5,8 @@ from app.calculator import sum, subtract, multiply, divide
 import pytest
 from pytest import approx
 
+import cal
+
 #
 # Sum tests
 #
