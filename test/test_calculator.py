@@ -94,4 +94,4 @@ def test_divide_7_by_3_equals_2_33():
 
 def test_division_by_zero_raises_exception():
     with pytest.raises(ZeroDivisionError):
-        assert divide(7, 0) == 0
+        divide(7, 0)
